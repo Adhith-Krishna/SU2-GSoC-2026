@@ -25,7 +25,7 @@ wall condition.
 | Convergence target        | rms[ρ] < 10⁻⁹     | To maintain high accuracy         |
 
 ## Convergence
-The simulation converged after 26,757 iterations to rms[ρ] = -9.00006. CFL = 3.0 was required for stability — higher values caused divergence due to instability of the SST turbulence model at high Reynolds number.
+The simulation converged after 26,757 iterations to rms[ρ] = -9.00006. CFL = 3.0 was required for stability as higher values caused divergence due to instability of the SST turbulence model at high Reynolds number.
 
 ## Debugging and Issues encountered
 - Initially focused on obtaining a residual of order of magnitude of -15 as it was the default value in the
