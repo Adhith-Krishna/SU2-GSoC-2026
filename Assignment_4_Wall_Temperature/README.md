@@ -1,4 +1,4 @@
-# Assignment 3 - Python Wrapper Test Case
+# Assignment 4 - Python Wrapper with Wall Temperature
 **Author:** Adhith Krishna | VIT Vellore | GSoC 2026 — Stichting SU2
 
 ## Case Description
@@ -46,7 +46,8 @@ resolves this. This made the simulation process slower, however the run no longe
 crashed.
 
 ## Results 
-
+<img width="539" height="605" alt="Screenshot 2026-03-18 172211" src="https://github.com/user-attachments/assets/75b803ad-a8ce-4a36-ba42-b38348231c7c" />
+<img width="469" height="642" alt="Screenshot 2026-03-18 172705" src="https://github.com/user-attachments/assets/a8329e1b-1dfc-431e-be96-39899ad59066" />
 
 ## References
 Pearce, B. (1970). A Comparison of Four Simple Calculation Methods for the Compressible Turbulent Boundary Layer on a Flat Plate. TOR-0066(5758-02)-3. The Aerospace Corporation.
