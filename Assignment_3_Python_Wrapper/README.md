@@ -1,4 +1,5 @@
 # Assignment 3 - Python Wrapper Test Case
+**Author:** Adhith Krishna | VIT Vellore | GSoC 2026 — Stichting SU2
 
 ## Case Description
 Turbulent flow over a flat plate at Mach 0.2 and a Reynolds Number of 5x10^6 using the
