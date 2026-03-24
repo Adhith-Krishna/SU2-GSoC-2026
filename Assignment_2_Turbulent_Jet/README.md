@@ -45,7 +45,7 @@ The jet issues from the nozzle at the origin (bottom-left) and spreads radially 
 with the experimental setup of Fukushima et al. (2001). The colorbar range of 0–1.0 m/s corresponds to the normalised jet exit velocity of 1.0 m/s.
 
 ### Centerline velocity decay
-<img width="848" height="632" alt="image" src="https://github.com/user-attachments/assets/1a27815a-1523-4573-af79-9ac19af527c2" />
+<img width="446" height="319" alt="image" src="https://github.com/user-attachments/assets/1a27815a-1523-4573-af79-9ac19af527c2" />
 <img width="446" height="319" alt="image" src="https://github.com/user-attachments/assets/3734f707-d3a6-4cfa-9f10-068e1003aacf" />
 The decay character is consistent with Fukushima et al, although we use normalized units whereas Fukushima has plotted it using 
 dimensional units. Our graph and mesh only simulates up to x=90. This is because the length of the computational domain is taken
