@@ -40,7 +40,8 @@ the cycling of the solution residuals at -3 and -4 and helped the solution conve
 ## Results 
 
 ### Velocity Contour
-<img width="851" height="634" alt="image" src="https://github.com/user-attachments/assets/efb4baab-5c38-4901-9c8d-e085aac51315" />
+<img width="425" height="317" alt="image" src="https://github.com/user-attachments/assets/efb4baab-5c38-4901-9c8d-e085aac51315" />
+
 The jet issues from the nozzle at the origin (bottom-left) and spreads radially as it propagates downstream along the x-axis. This is consistent
 with the experimental setup of Fukushima et al. (2001). The colorbar range of 0–1.0 m/s corresponds to the normalised jet exit velocity of 1.0 m/s.
 
@@ -54,6 +55,7 @@ equal to 45 orifice diameters as per Boersma et al.
 
 ### Convergence Graphs over the last 500 iterations
 <img width="790" height="235" alt="image" src="https://github.com/user-attachments/assets/e41cff12-3e7c-4b13-851e-c2ae3ceca698" />
+
 All three residuals dropped steadily from iteration 0 to approximately iteration 2100,
 reaching rms[P] ≈ -8.3, rms[k] ≈ -8.9, and rms[ω] ≈ -7.3. Beyond this point the
 residuals entered a limit cycle, oscillating within a narrow band of approximately
