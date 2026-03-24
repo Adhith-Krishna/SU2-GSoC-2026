@@ -1,5 +1,5 @@
 # Assignment 5 - Addition of New Volume Output: Local Speed of Sound
-**Author:** Adhith Krishna | VIT Vellore | GSoC 2026 — Stichting SU2
+**Author:** Adhith Krishna | VIT Vellore | GSoC 2026 - Stichting SU2
 
 ## Case Description
 Extension of the Assignment 2 axisymmetric turbulent jet case (Re = 2000, SST RANS) to include
@@ -79,25 +79,23 @@ ninja install
 ### Screen History Output
 The `c_avg` column appears in the solver screen output alongside the residuals:
 
-```
-+----------------------------------------------------------------+
-|  Inner_Iter|      rms[P]|      rms[k]|      rms[w]|       c_avg|
-+----------------------------------------------------------------+
-|           0|   -1.305239|   -4.994196|   -1.786424|  2.1211e+00|
-```
+<img width="422" height="559" alt="image" src="https://github.com/user-attachments/assets/272eae2b-43df-4ba9-9323-24135a79e653" />
+
 
 The value of c_avg ≈ 2.12 is the artificial speed of sound √(β²) used by SU2's
 incompressible pressure-velocity coupling. It remains approximately constant throughout
 the simulation.
 
 ### Volume Output — Sound Speed Colour Map
-*[Insert ParaView screenshot of Sound_Speed field here]*
+<img width="973" height="632" alt="image" src="https://github.com/user-attachments/assets/31565ad4-748c-4a09-88a9-ebf6d3d2d5c4" />
 
-The `Sound_Speed` field is visible in ParaView under the PRIMITIVE group. The spatial
-distribution reflects the artificial compressibility parameter β² across the domain.
+As the sound of speed barely varies in the simulation, the entire figure instead shows up as a solid blue coloured block on ParaView.
 
 ### Velocity Contour (same case as Assignment 2)
-*[Insert velocity contour screenshot here]*
+<img width="976" height="634" alt="image" src="https://github.com/user-attachments/assets/f965d999-1aeb-44cb-972d-cc1d3358322f" />
+
+The simulation gives us the same graph as that in Assignment 2, as the boundary conditions, mesh and such remain the same with only a minor
+change within the solver.
 
 ## References
 - Fukushima, C., Aanen, L. & Westerweel, J. (2001). Investigation of the mixing process
