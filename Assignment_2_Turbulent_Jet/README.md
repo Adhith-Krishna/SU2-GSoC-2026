@@ -26,20 +26,38 @@ Boersma et al. (1998).
 ## Mesh Parameters
 - 28,713 nodes and 56,787 elements
 - Axisymmetric 2D domain
-- Minimum and maixmum orthogonality of 73.4324 and 89.9918
+- Minimum and maximum orthogonality of 73.4324 and 89.9918
 - 5 boundary markers named 'jet_inlet', 'nozzle_plate', 'top_wall', 'outlet', 'axis'
-
-## Convergence
-All three residuals dropped steadily to approximately rms[P] ≈ -8.3, rms[k] ≈ -8.9, 
-rms[ω] ≈ -7.3 before entering a cycle. This indicated the solution is physically 
-converged even though the residuals could not be reduced further.
 
 ## Debugging and Issues encountered
 - `INC_VELOCITY_INIT` was initialised at 0.001 m/s instead of 1.0 m/s by accident, causing a non-physical velocity field. Corrected to match inlet velocity.
 - Initially the condition MUSCL was set to YES, which upon taking Dr. Nijso's advice was changed to NO. This stopped
 the cycling of the solution residuals at -3 and -4 and helped the solution converge at -8.
-
+- Initially the solver was set to 'INC_NAVIER_STOKES' which meant a laminar solve instead of 'INC_RANS'. I wasn't clear with this and therefore the laminar NS
+  solve gave incorrect values. My initial assumption was that 'INC_NAVIER_STOKES' method would run a full Direct Navier Stokes simulation and was done to experiment and
+  learn how SU2's (assumed) DNS solver would work although it would have been computational extremely expensive.
+  
 ## Results 
+
+### Velocity Contour
+<img width="851" height="634" alt="image" src="https://github.com/user-attachments/assets/efb4baab-5c38-4901-9c8d-e085aac51315" />
+The jet issues from the nozzle at the origin (bottom-left) and spreads radially as it propagates downstream along the x-axis. This is consistent
+with the experimental setup of Fukushima et al. (2001). The colorbar range of 0–1.0 m/s corresponds to the normalised jet exit velocity of 1.0 m/s.
+
+### Centerline velocity decay
+<img width="848" height="632" alt="image" src="https://github.com/user-attachments/assets/1a27815a-1523-4573-af79-9ac19af527c2" />
+<img width="446" height="319" alt="image" src="https://github.com/user-attachments/assets/3734f707-d3a6-4cfa-9f10-068e1003aacf" />
+The decay character is consistent with Fukushima et al, although we use normalized units whereas Fukushima has plotted it using 
+dimensional units. Our graph and mesh only simulates up to x=90. This is because the length of the computational domain is taken
+equal to 45 orifice diameters as per Boersma et al.
+
+### Convergence Graphs over the last 500 iterations
+<img width="790" height="235" alt="image" src="https://github.com/user-attachments/assets/e41cff12-3e7c-4b13-851e-c2ae3ceca698" />
+All three residuals dropped steadily from iteration 0 to approximately iteration 2100,
+reaching rms[P] ≈ -8.3, rms[k] ≈ -8.9, and rms[ω] ≈ -7.3. Beyond this point the
+residuals entered a limit cycle, oscillating within a narrow band of approximately
+±0.35 without further reduction. The solution is considered
+physically converged at this point.
 
 
 ## References
